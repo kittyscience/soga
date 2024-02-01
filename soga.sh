@@ -84,7 +84,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/soga/master/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/kittyscience/soga/master/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -108,7 +108,7 @@ update() {
 #        fi
 #        return 0
 #    fi
-    bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/soga/master/install.sh) $version
+    bash <(curl -Ls https://raw.githubusercontent.com/kittyscience/soga/master/install.sh) $version
     if [[ $? == 0 ]]; then
         echo -e "${green}更新完成，已自动重启 soga，请使用 soga log 查看运行日志${plain}"
         exit
@@ -239,7 +239,7 @@ show_log() {
 }
 
 update_shell() {
-    wget -O /usr/bin/soga -N --no-check-certificate https://github.com/vaxilu/soga/raw/master/soga.sh
+    wget -O /usr/bin/soga -N --no-check-certificate https://github.com/kittyscience/soga/raw/master/soga.sh
     if [[ $? != 0 ]]; then
         echo ""
         echo -e "${red}下载脚本失败，请检查本机能否连接 Github${plain}"
